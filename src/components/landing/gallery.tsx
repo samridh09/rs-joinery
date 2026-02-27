@@ -18,19 +18,20 @@ const Gallery = () => {
       <div className="container-custom flex flex-col items-center">
 
         {/* Header Section */}
-        <div className="w-full flex flex-col md:flex-row justify-between items-end mb-12 md:mb-16 gap-6">
-          <div className="space-y-6">
+        <div className="w-full flex flex-col items-center text-center mb-12 md:mb-16 gap-6">
+          <div className="space-y-4 flex flex-col items-center">
             <div className="flex items-center space-x-4">
               <span className="w-12 h-[1px] bg-foreground"></span>
               <span className="text-xs font-bold uppercase tracking-[0.2em] text-foreground">
                 Our Work
               </span>
+              <span className="w-12 h-[1px] bg-foreground"></span>
             </div>
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-heading font-extrabold text-foreground leading-[1.1] tracking-tight">
               Our <span className="text-muted-foreground">Gallery</span>
             </h2>
           </div>
-          <p className="text-lg text-muted-foreground max-w-md md:text-right leading-relaxed">
+          <p className="text-lg text-muted-foreground max-w-2xl leading-relaxed">
             Explore our curated collection of masterful designs and bespoke carpentry. Every piece is a testament to our dedication to craft and quality.
           </p>
         </div>
@@ -44,7 +45,7 @@ const Gallery = () => {
             >
               {/* Varying heights to simulate organic masonry before true images load */}
               <div className={`relative w-full ${index % 3 === 0 ? 'aspect-[3/4]' :
-                  index % 4 === 0 ? 'aspect-[4/5]' : 'aspect-square'
+                index % 4 === 0 ? 'aspect-[4/5]' : 'aspect-square'
                 }`}>
                 <Image
                   src={image.src}
